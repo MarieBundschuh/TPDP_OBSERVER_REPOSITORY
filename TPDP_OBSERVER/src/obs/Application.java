@@ -1,0 +1,17 @@
+package obs;
+
+public class Application {
+
+	public static void main(String[] args) {
+		System.out.println("Application Design Pattern");
+		ObservableConcret sujet = new ObservableConcret();
+		ObserverImpl1 obs1 = new ObserverImpl1();
+		sujet.addObserver(obs1);
+		ObserverImpl2 obs2 = new ObserverImpl2();
+		sujet.addObserver(obs2);
+		sujet.setEtat(8);
+		sujet.setEtat(7);
+
+	}
+
+}
